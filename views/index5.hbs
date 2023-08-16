@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上點餐</title>
+    <link rel="stylesheet" href="stylecss.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="scrolladmin">
+    <header>
+        <img src="00/201.png" alt="Your Image" class="header-image" id="logo">
+        <div class="button-container">
+            <button class="button"><a href="/">首頁</a></button>
+            <button class="button"><a href="/">餐點介紹</a></button>
+            <button class="button"><a href="/">永續與投資</a></button>
+            <button class="button"><a href="/">關於我們</a></button>
+            <button class="button"><a href="/index2">線上點餐</a></button>
+            <div id="sidebarbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                    class="bi bi-layout-text-sidebar" viewBox="0 0 16 16">
+                    <path
+                        d="M3.5 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM3 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm12-1v14h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 0H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h9V1z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <div class="hideside"></div>
+    <div class="sidebars" id="sidebarsID">
+        <button class="sidebutton" onclick="scrollhome()">首頁</button>
+        <button class="sidebutton" onclick="scrollmeal()">餐點介紹</button>
+        <button class="sidebutton" onclick="scrollforever()">永續與投資</button>
+        <button class="sidebutton" onclick="scrollus()">關於我們</button>
+        <button class="sidebutton"><a href="/index2">線上點餐</a></button>
+    </div>
+
+    <div class="new-block" id="section2">
+        <div class="signall">
+            <div><button id="sign"><a style="text-decoration: none; color: rgb(253, 251, 251);"
+                        href="#">{{recordname}}</a></button></div>
+            <div><button id="sign-up"><a style="text-decoration: none; color: rgb(253, 251, 251);"
+                        href="/auth/logout">登出</a></button></div>
+        </div>
+
+        <h2>餐點介紹</h2>
+        <p>品味美食，滿足味蕾的奢享！</p>
+        <div class="button-new">
+
+            <div class="new-button-new">
+                <img src="00/1106-2.jpg" alt="蛋包飯">
+                <p>$90</p>
+                蛋包飯
+                <button id="omuricebuycarbtn">加入購物車</button>
+            </div>
+
+            <div class="new-button-new">
+                <img src="00/1106-3.jpg" alt="鬆餅">
+                <p>$50</p>
+                鬆餅
+                <button id="muffinbuycarbtn">加入購物車</button>
+            </div>
+
+            <div class="new-button-new">
+                <img src="00/1106-4.jpg" alt="千層麵">
+                <p>$80</p>
+                千層麵
+                <button id="melaleucabuycarbtn">加入購物車</button>
+            </div>
+
+            <div class="new-button-new">
+                <img src="00/224.jpg" alt="披薩">
+                <p>$399</p>
+                披薩
+                <button id="pizzabuycarbtn">加入購物車</button>
+            </div>
+
+            <div class="new-button-new">
+                <img src="00/1106-5.jpg" alt="義大利麵">
+                <p>$115</p>
+                義大利麵
+                <button id="pastabuycarbtn">加入購物車</button>
+            </div>
+
+            <div class="new-button-new">
+                <img src="00/1106-6.jpg" alt="燉飯">
+                <p>$120</p>
+                燉飯
+                <button id="stewbuycarbtn">加入購物車</button>
+            </div>
+
+        </div>
+        <button id="buycar" onclick="windowopen()">購物車</button>
+
+        <div class="cartWindow">
+            <!-- 視窗內容 -->
+            <h2>
+                <nobr>你的餐點清單</nobr>
+            </h2>
+            <div id="x">x</div>
+
+            <div id="fooditems">
+                <input type="number" name="shstime" id="shstime" value="{{recordtime}}" style="display: none;"
+                    readonly>
+                <div id="flytime"></div>
+            </div>
+
+            <div class="calculate">
+                <div id="money">金額：</div>
+                <div id="time">時間：</div>
+                <form action="/auth/order" method="post" id="orderForm">
+                    <input type="text" name="price" id="sqlprice" style="display: none;">
+                    <input type="text" name="time" id="sqltime" style="display: none;">
+
+                    <button id="order" type="submit">買單</button>
+                </form>
+            </div>
+
+
+        </div>
+
+
+
+
+</body>
+<script src="scriptjs.js"></script>
+<script src="scriptjs2.js"></script>
+
+</html>

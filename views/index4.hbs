@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊</title>
+    <link rel="stylesheet" href="stylecss.css">
+</head>
+
+<body class="scrolladmin">
+    <header>
+        <img src="00/201.png" alt="Your Image" class="header-image" id="logo">
+        <div class="button-container">
+            <button class="button"><a href="/">首頁</a></button>
+            <button class="button"><a href="/">餐點介紹</a></button>
+            <button class="button"><a href="/">永續與投資</a></button>
+            <button class="button"><a href="/">關於我們</a></button>
+            <button class="button"><a href="/index2">線上點餐</a></button>
+            <div id="sidebarbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                    class="bi bi-layout-text-sidebar" viewBox="0 0 16 16">
+                    <path
+                        d="M3.5 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM3 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm12-1v14h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 0H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h9V1z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <div class="hideside"></div>
+    <div class="sidebars" id="sidebarsID">
+        <button class="sidebutton" onclick="scrollhome()">首頁</button>
+        <button class="sidebutton" onclick="scrollmeal()">餐點介紹</button>
+        <button class="sidebutton" onclick="scrollforever()">永續與投資</button>
+        <button class="sidebutton" onclick="scrollus()">關於我們</button>
+        <button class="sidebutton"><a href="/index2">線上點餐</a></button>
+    </div>
+
+    <main id="section1">
+        <div class="sign-in">
+
+            {{#if message}}<div id="messsagebox">{{message}}</div>{{/if}}
+            <h2>註冊</h2>
+
+            <form action="/auth/register" method="post">
+                <div id="namecontainer">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1024px-User_icon_2.svg.png"
+                        width="50px" height="50px">
+                    <label for="name">
+                        <nobr>名稱</nobr>
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="name">
+                </div>
+
+                <div id="emailcontainer">
+                    <img src="https://cdn-icons-png.flaticon.com/512/552/552486.png" width="50px" height="50px">
+                    <label for="email">
+                        <nobr>信箱</nobr>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="email">
+                </div>
+
+                <div id="passwordcontainer">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1000/1000957.png" width="50px" height="50px">
+                    <label for="password">
+                        <nobr>密碼</nobr>
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                </div>
+
+                <div id="passwordconfirmcontainer">
+                    <img src="https://thumbs.dreamstime.com/b/lock-icon-check-sign-approved-confirm-done-tick-completed-symbol-vector-112041308.jpg"
+                        width="50px" height="50px">
+                    <label for="passwordconfirm">
+                        <nobr>確認</nobr><br>
+                        <nobr>密碼</nobr>
+                    </label>
+                    <input type="password" name="passwordconfirm" id="passwordconfirm" placeholder="passwordconfirm">
+                </div>
+
+
+
+                <input type="submit" id="sin" value="註冊">
+
+                <div class="sign-up">
+                    <a href="/index3">已有帳號?登入</a>
+                </div>
+
+            </form>
+
+
+
+
+
+        </div>
+        <img src="00/111.jpeg" alt="Your Image" id="topimg">
+
+
+    </main>
+
+
+
+    <div class="new-block" id="section2"></div>
+
+
+
+
+
+</body>
+<script src="scriptjs.js"></script>
+<script src="scriptjs2.js"></script>
+
+</html>

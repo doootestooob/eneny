@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="stylecss.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="scrolladmin">
+    <header>
+        <img src="00/201.png" alt="Your Image" class="header-image" id="logo">
+        <div class="button-container">
+            <button class="button" onclick="scrollhome()">首頁</button>
+            <button class="button" onclick="scrollmeal()">餐點介紹</button>
+            <button class="button" onclick="scrollforever()"><nobr>永續與投資</nobr></button>
+            <button class="button" onclick="scrollus()">關於我們</button>
+            <button class="button"><a href="/index2">線上點餐</a></button>
+            <div id="sidebarbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                    class="bi bi-layout-text-sidebar" viewBox="0 0 16 16">
+                    <path
+                        d="M3.5 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM3 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm12-1v14h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 0H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h9V1z" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <div class="hideside"></div>
+    <div class="sidebars" id="sidebarsID">
+        <button class="sidebutton" onclick="scrollhome()">首頁</button>
+        <button class="sidebutton" onclick="scrollmeal()">餐點介紹</button>
+        <button class="sidebutton" onclick="scrollforever()">永續與投資</button>
+        <button class="sidebutton" onclick="scrollus()">關於我們</button>
+        <button class="sidebutton"><a href="/index2">線上點餐</a></button>
+    </div>
+
+
+    <main id="section1">
+        <img src="00/111.jpg" alt="Your Image" id="topimg">
+        <span class="image-text">你今天想好要吃什麼嗎?</span>
+        <button class="slide-down">查看更多</button>
+
+    </main>
+    <div class="new-block" id="section2">
+        <h2>餐點介紹</h2>
+        <p>品味美食，滿足味蕾的奢享！</p>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="00/1106-2.jpg" alt="Card image cap" height="200" class="card-img-top">
+                <h5 class="card-title">蛋包飯</h5>
+                <p class="card-text">美味可口的蛋包饭，金黄饭糰，咸香蛋液，诱人食欲。</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="00/1106-3.jpg" alt="Card image cap" height="200" class="card-img-top">
+                <h5 class="card-title">鬆餅</h5>
+                <p class="card-text">鬆軟香甜，口感綿密，金黃外皮，充滿奶香氣息。</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="00/1106-4.jpg" alt="Card image cap" height="200" class="card-img-top">
+                <h5 class="card-title">千層麵</h5>
+                <p class="card-text">層次分明，香氣誘人，口感豐富，質感綿密，滋味綿長。</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="00/224.jpg" alt="Card image cap" height="200" class="card-img-top">
+                <h5 class="card-title">披薩</h5>
+                <p class="card-text">美味脆皮，奶酪丰富，香气四溢，多种口味，令人垂涎欲滴。</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="00/1106-5.jpg" alt="Card image cap" height="200" class="card-img-top">
+                <h5 class="card-title">義大利麵</h5>
+                <p class="card-text">香氣四溢、彈牙滋味、濃郁醬汁、經典美食、意式風情。</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="00/1106-6.jpg" alt="Card image cap" height="200" class="card-img-top">
+                <h5 class="card-title">燉飯</h5>
+                <p class="card-text">香氣撲鼻，米粒鬆軟，口感豐富，滋味濃郁。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="on-block">
+        <div class="on-block-on">
+            <h2>永續發展</h2>
+            <p>可持續發展或永續發展，「可持續性」其最常見的定義出自布倫特<br>
+                蘭委員會的《我們共同的未來》：「既能滿足我們現今的需求，又<br>
+                不損害子孫後代，能滿足他們的需求的發展模式。」永續發展努力<br>
+                實現環境保護、經濟和永續發展的目標。</p>
+            <img src="00/227.jpg" alt="Your Image" class="on-block-on-img" id="onimg227"> 
+        </div>
+        <div class="on-block-oo">
+            <h2>永續投資</h2>
+            <p>永續投資是指在投資決策中考慮環境、社會和公司治理（ESG）因素的一種投資方法。
+                它追求在經濟和金融回報的同時，對環境和社會產生積<br>極影響，並促進長期可持續發展。</p>
+            <img src="00/228.jpg" alt="Your Image" class="on-block-oo-img">
+        </div>
+        <div class="on-block-oo">
+            <h2>認識ESG</h2>
+            <p>ESG 是指可以作為部分投資決策的特定考量因素：</p>
+            <img src="00/229.jpg" alt="Your Image" class="on-block-oo-img">
+
+
+        </div>
+
+
+
+
+
+        <div class="no-block">
+
+            <div class="no-block-nnnn">
+                <div id="prevbtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                        class="bi bi-arrow-left-circle-fill prevstyle" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                    </svg>
+                </div>
+                
+                <div class="no-block-nnn" id="conteinerimgs">
+                    <div class="no-block-nn" >
+
+
+                        <div class="mm">
+                            <img src="00/230.png" alt="Your Image" class="no-block-nn-img">
+                        </div>
+
+                        <div class="mm">
+                            <img src="00/231.jpg" alt="Your Image" class="no-block-nn-img">
+                        </div>
+
+                        <div class="mm">
+                            <img src="00/232.jpg" alt="Your Image" class="no-block-nn-img">
+                        </div>
+
+                        <div class="mm">
+                            <img src="00/233.jpg" alt="Your Image" class="no-block-nn-img">
+                        </div>
+
+                        <div class="mm">
+                            <img src="00/234.png" alt="Your Image" class="no-block-nn-img">
+                        </div>
+
+                        <div class="mm">
+                            <img src="00/235.png" alt="Your Image" class="no-block-nn-img">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="nextbtn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                </svg>
+            </div>
+            </div>
+            <h2>關於我們</h2>
+            <p>Gmail: g6yji4@gmail.com</p>
+
+            <p>住址：220新北市板橋區四川路二段58號</p>
+
+            <p>電話：02 7738 8000</p>
+
+            <p>LINE官方帳號：@044xfskz</p>
+            <img src="00/236.png" class="no-block-img">
+
+
+
+        </div>
+
+
+
+    </div>
+
+    <footer>
+        <p>© 2023 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+<script src="scriptjs.js"></script>
+
+</html>

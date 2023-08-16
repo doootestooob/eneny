@@ -1,0 +1,1476 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+
+#messsagebox {
+    color: red;
+    background-color: pink;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.scrolladmin {
+    overflow-y: scroll;
+}
+
+.scrolladmin.active {
+    overflow-y: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111111;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+    border-bottom: 2px solid rgb(86, 86, 86);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    z-index: 98;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.header-image {
+    /* 图像201的样式 */
+    width: 100%;
+    /* 图像的宽度，根据需要进行调整 */
+    height: auto;
+    /* 图像的高度自动适应比例 */
+    filter: blur(0px);
+    /* 添加模糊效果，模糊程度为5像素 */
+}
+
+
+
+#logo {
+    position: relative;
+    width: 8%;
+    top: 0;
+    left: 2%;
+}
+
+/*清單按鈕*/
+.button-container {
+
+    width: 50%;
+    height: 150px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    align-items: center;
+
+
+
+}
+
+.button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #f8d005;
+    color: #0b0b0b;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    align-items: center;
+    width: 20%;
+    font-size: 20px;
+    /* 文字大小 */
+    font-weight: bold;
+    /* 文字粗细 */
+    text-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+    /* 文字阴影效果 */
+    transition: 0.5s;
+}
+
+.button a {
+    text-decoration: none;
+    color: #0b0b0b;
+}
+
+.button:hover {
+    background-color: #fdfdfd;
+    color: #000;
+}
+
+main {
+    position: relative;
+    /* 使主容器成为相对定位的父级 */
+    z-index: 1;
+    width: 100%;
+    height: auto;
+
+}
+
+footer {
+    background-color: #111111;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#topimg {
+    width: 100%;
+    height: 800px;
+    position: relative;
+
+    filter: blur(5px);
+
+}
+
+.image-text {
+    position: absolute;
+    /* 使用绝对定位 */
+    top: 50%;
+    /* 将文字位置设为容器的50% */
+    left: 50%;
+    /* 将文字位置设为容器的50% */
+    transform: translate(-50%, -50%);
+    /* 通过位移来调整文字位置 */
+    color: #fff;
+    /* 文字颜色 */
+    font-size: 50px;
+    /* 文字大小 */
+    font-weight: bold;
+    /* 文字粗细 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* 文字阴影效果 */
+}
+
+.slide-down {
+    /* 按钮的样式 */
+    position: absolute;
+    /* 将按钮设置为绝对定位 */
+    bottom: 200px;
+    /* 将按钮置于底部 */
+    left: 50%;
+    /* 将按钮水平居中 */
+    transform: translateX(-50%);
+    /* 将按钮水平居中 */
+    margin-bottom: 10px;
+    /* 添加一些间距，使按钮与图像文字之间有一定的空隙 */
+    padding: 8px 16px;
+    /* 按钮的内边距 */
+    background-color: #0795b9;
+    /* 按钮的背景颜色 */
+    color: white;
+    /* 按钮的文本颜色 */
+    border: none;
+    /* 去除按钮的边框 */
+    border-radius: 8px;
+    /* 按钮的圆角 */
+    font-size: 40px;
+    /* 按钮的字体大小 */
+    font-weight: bold;
+    /* 文字粗细 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* 文字阴影效果 */
+    z-index: 2;
+    cursor: pointer;
+    /* 鼠标指针样式 */
+
+}
+
+.slide-down:hover {
+    background-color: #3bddf6;
+    /* 鼠标悬停时按钮的背景颜色 */
+}
+
+.new-block {
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.new-block h2 {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: 4%;
+}
+
+.new-block h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: rgb(151, 149, 149);
+    width: 95%;
+    position: absolute;
+    bottom: -5px;
+    /* Adjust this value to control the distance between text and underline */
+}
+
+.new-block p {
+    font-size: 25px;
+    color: #4c4c4c;
+    margin-left: 4%;
+}
+
+/*****/
+#sign {
+    /* 按钮的样式 */
+    position: relative;
+    /* 将按钮设置为绝对定位 */
+    padding: 8px 16px;
+    background-color: #164804;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(252, 248, 248);
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+
+    z-index: 50;
+
+}
+
+#sign-up {
+    /* 按钮的样式 */
+    position: relative;
+    /* 将按钮设置为绝对定位 */
+    padding: 8px 16px;
+    background-color: #164804;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(252, 248, 248);
+    position: relative;
+    text-align: center;
+    align-items: center;
+
+
+    z-index: 50;
+
+}
+
+
+
+
+/*****/
+
+.button-new {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 1%;
+    margin-bottom: 30px;
+}
+
+
+.new-button-new {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    color: #030303;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.new-button-new button {
+    /* 按钮的样式 */
+    position: relative;
+    /* 将按钮设置为绝对定位 */
+    padding: 8px 16px;
+    background-color: #571e9d;
+    margin-bottom: 200px;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    color: hsl(0, 33%, 99%);
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    float: right;
+
+
+}
+
+.new-button-new button:hover {
+    background-color: #e5c0f7;
+    color: #0c0c0c;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.new-button-new img {
+    /* Add desired styles for the images */
+    width: 300px;
+    height: 250px;
+    margin-right: 35%;
+    filter: blur(0px);
+    margin-top: 5px;
+}
+
+.new-button-new p {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    color: #030303;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 5%;
+
+
+}
+
+#sidebarbtn {
+    display: none;
+}
+
+#buycar {
+    /* 按钮的样式 */
+    position: relative;
+    /* 将按钮设置为绝对定位 */
+    padding: 8px 16px;
+    background-color: #b42107;
+    margin-bottom: 300px;
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    color: hwb(0 99% 1%);
+    margin-bottom: 30px;
+    z-index: 20;
+    left: 50%;
+    margin-top: 30px;
+    text-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+
+}
+
+#buycar:hover {
+    background-color: #6cdbf4;
+    color: hwb(0 98% 0%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cartWindow {
+    display: none;
+    position: fixed;
+
+    width: 1200px;
+    height: 750px;
+
+}
+
+.cartWindow.active {
+    z-index: 99;
+    display: flex;
+    background-color: #050505;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 20%;
+    left: 22%;
+    width: 1200px;
+    height: 750px;
+
+}
+
+.cartWindow.active h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(252, 250, 250);
+    text-shadow: 0.5px 0.2px 1px rgba(254, 252, 252, 0.5);
+    margin-left: 39%;
+}
+
+.cartWindow.active h2::after {
+    display: block;
+    height: 2px;
+    background-color: rgb(255, 254, 254);
+    width: 1100px;
+    top: 60px;
+    right: -460px;
+
+}
+
+#cartList {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(252, 250, 250);
+    margin-left: 40%;
+}
+
+/**/
+
+.hideside {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.hideside.active {
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    z-index: 98;
+}
+
+.sidebars {
+    position: fixed;
+    background: none;
+    width: 300px;
+    height: 745px;
+    z-index: -1;
+    display: none;
+    transition: 0.5s;
+    top: 0;
+
+}
+
+.sidebutton {
+    background-color: #f8d005;
+    color: #0b0b0b;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 80%;
+    height: 80px;
+    margin-top: 8%;
+    font-size: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    /* 文字粗细 */
+    text-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+    /* 文字阴影效果 */
+    transition: 0.5s;
+
+}
+
+.sidebutton:hover {
+    background-color: #090909;
+    color: #fefcfc;
+}
+
+.sidebars.active {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 99;
+    background: white;
+    transition: 0.5s;
+    right: 0%;
+
+}
+
+/**/
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /*ˋ這是設定當瀏覽器視窗縮小時，讓元素換行顯示*/
+    flex-wrap: wrap;
+    width: 91%;
+    margin-left: 4%;
+    margin-bottom: 20px;
+
+}
+
+.col-lg-4 {
+    border: 1px solid #ffffff;
+    /* 設定邊框樣式 */
+    box-sizing: border-box;
+    /* 考慮邊框寬度在內容框模型中 */
+    float: left;
+    /* 讓元素浮動到左邊 */
+    width: 33.33%;
+    /* 設定寬度為三分之一，即分為三列 */
+    padding: 10px;
+    /* 可選，設定內邊距 */
+    height: 450px;
+
+    margin-bottom: 20px;
+
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    font-size: 20px;
+    color: #0c0c0c;
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 3%;
+    margin-top: 5px;
+
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #464545;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+.card-img-top {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 3%;
+    margin-top: 5px;
+}
+
+/***/
+
+.on-block {
+    background-color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+
+}
+
+.on-block-on {
+    background-color: #080808;
+    padding: 50px;
+    width: 100%;
+    height: 500px;
+}
+
+.on-block-on h2 {
+    font-size: 50px;
+    color: #fffefe;
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 3%;
+    margin-top: 1%;
+
+
+
+}
+
+.on-block-on p {
+    font-size: 30px;
+    color: #fffefe;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.on-block-on-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 600px;
+    height: 400px;
+    top: -60%;
+    position: relative;
+
+    float: right;
+    right: 8%;
+    /* Add this line */
+}
+
+.on-block-oo {
+    background-color: hsl(0, 100%, 100%);
+    padding: 50px;
+    width: 100%;
+}
+
+.on-block-oo h2 {
+    font-size: 40px;
+    color: #0b0b0b;
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+.on-block-oo p {
+    width: 80%;
+    font-size: 25px;
+    color: #302f2f;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.on-block-oo-img {
+    width: 50%;
+    margin-left: 22%;
+    margin-top: 1%;
+}
+
+.no-block {
+    background-color: #010f33cd;
+    padding: 0px;
+    margin: 0px;
+    width: 121%;
+}
+
+.no-block-nn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 7%;
+    margin-bottom: 10px;
+}
+
+.mm {
+
+    box-sizing: border-box;
+    /* 考慮邊框寬度在內容框模型中 */
+    float: left;
+    /* 讓元素浮動到左邊 */
+    width: 15%;
+    /* 設定寬度為三分之一，即分為三列 */
+    padding: 5px;
+    /* 可選，設定內邊距 */
+    height: 350px;
+    margin-bottom: 10px;
+    margin-top: 3%;
+
+}
+
+.no-block-nn-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 0px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.no-block h2 {
+    font-size: 30px;
+    color: #fffefe;
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 8%;
+    margin-top: -1%;
+}
+
+.no-block p {
+    font-size: 20px;
+    color: #fffefe;
+    margin-left: 8%;
+    margin-top: 1%;
+
+}
+
+.no-block-img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 800px;
+    margin-top: -250px;
+    margin-bottom: 50px;
+
+}
+
+#prevbtn {
+    display: none;
+}
+
+#nextbtn {
+    display: none;
+}
+
+#x {
+    font-size: 50px;
+    display: flex;
+    color: #fffefe;
+    font-weight: bold;
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 38%;
+    margin-top: 1%;
+    border: 3px solid #ffffff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.sign-in {
+    width: 600px;
+    height: 700px;
+    background-color: hsl(0, 25%, 97%);
+    position: fixed;
+    z-index: 1;
+    margin-top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: #000000 solid 2px;
+    border-radius: 10px;
+
+}
+
+.sign-in h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0c0c0c;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#emailcontainer {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#emailcontainer label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c0c0c;
+    margin-right: 3%;
+    margin-left: 3%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+#emailcontainer input {
+    width: 70%;
+    height: 34px;
+    font-size: 30px;
+    border: none;
+    border-bottom: #000000 solid 1px;
+    background-color: hsl(0, 25%, 97%);
+    padding-left: 10px;
+}
+
+#passwordcontainer {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#passwordcontainer label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c0c0c;
+    margin-right: 3%;
+    margin-left: 3%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+#passwordcontainer input {
+    width: 70%;
+    height: 34px;
+    font-size: 30px;
+    border: none;
+    border-bottom: #000000 solid 1px;
+    background-color: hsl(0, 25%, 97%);
+    padding-left: 10px;
+}
+
+#sin {
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c0c0c;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 40%;
+    background-color: #f8d005;
+    text-shadow: 0.5px 0.2px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    text-align: center;
+
+}
+
+#namecontainer {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#namecontainer label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c0c0c;
+    margin-right: 3%;
+    margin-left: 3%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+#namecontainer input {
+    width: 70%;
+    height: 34px;
+    font-size: 30px;
+    border: none;
+    border-bottom: #000000 solid 1px;
+    background-color: hsl(0, 25%, 97%);
+    padding-left: 10px;
+}
+
+#passwordconfirmcontainer {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#passwordconfirmcontainer label {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0c0c0c;
+    margin-right: 3%;
+    margin-left: 3%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+#passwordconfirmcontainer input {
+    width: 70%;
+    height: 34px;
+    font-size: 30px;
+    border: none;
+    border-bottom: #000000 solid 1px;
+    background-color: hsl(0, 25%, 97%);
+    padding-left: 10px;
+}
+
+.sign-up {
+    justify-content: center;
+    display: flex;
+    position: relative;
+    margin-left: -2%;
+
+
+}
+
+/**cartWindow-a**/
+
+#fooditems {
+    width: 92%;
+    height: 75%;
+    position: relative;
+    left: 3%;
+    top: 3%;
+    overflow-x: hidden;
+}
+
+#fooditems::-webkit-scrollbar {
+    display: none;
+
+}
+
+
+.fooditem {
+    width: 99.9%;
+    height: 100px;
+    background-color: rgb(39, 38, 38);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px solid #000000;
+    font-size: 40px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 0px 0px gray,
+        0px 0px 0px 0px gray, 0px 0px 0px 0px gray,
+        1px 1px 1px 2px gray;
+    margin-top: 2%;
+}
+
+.deletemeal {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(255, 253, 253);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.deletemeal:hover {
+    color: red;
+    border: 2px solid red;
+}
+
+.foodimg {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px solid #000000;
+}
+
+.controlband {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+
+.bandbtn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(255, 253, 253);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/*calculate*/
+.calculate {
+    width: 92%;
+    position: relative;
+    left: 3%;
+    top: 0%;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 35px;
+    color: white;
+    display: flex;
+    font-weight: bold;
+
+}
+
+#money {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#time {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#order {
+    width: 120px;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid rgb(43, 42, 42);
+    background-color: #0435b1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#order:hover {
+    background-color: #078bf8;
+    border: 2px solid #0b0b0b;
+    transition: 0.5s;
+}
+
+.signall {
+
+    width: 20%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+
+    position: relative;
+    float: right;
+    right: 5%;
+
+
+}
+
+
+#flytime {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 1100px) {
+
+    body {
+        position: relative;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+
+    /* Apply styles for screens wider than 768px */
+    main {
+        display: flex;
+        justify-content: space-between;
+
+        width: 130%;
+        position: relative;
+        /* 使主容器成为相对定位的父级 */
+        z-index: 1;
+        height: auto;
+        left: 55%;
+        transform: translateX(-50%);
+    }
+
+
+
+
+    .image-text {
+        font-size: 40px;
+    }
+
+    .slide-down {
+        font-size: 30px;
+
+    }
+
+    #sidebarbtn {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        color: white;
+        font-size: 50px;
+        z-index: 2;
+        top: 30%;
+        left: 70%;
+        cursor: pointer;
+
+    }
+
+    .sidebutton a {
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .sidebutton a:hover {
+        color: #fffefe;
+    }
+
+    .button {
+        display: none;
+    }
+
+    #logo {
+        width: 20%;
+
+    }
+
+    section {
+        width: 50%;
+    }
+
+    .new-block {
+        width: 100%;
+        padding: 30px;
+        margin: 30px;
+    }
+
+    .new-block h2 {
+        font-size: 35px;
+        color: #0b0b0b;
+        font-weight: bold;
+        margin-bottom: 0px;
+        position: relative;
+        margin-left: 3%;
+        margin-top: 1%;
+    }
+
+    .new-block h2::after {
+        width: 80%;
+    }
+
+    .new-block p {
+        font-size: 25px;
+        color: #302f2f;
+        margin-left: 3%;
+        margin-top: 2%;
+    }
+
+    .button-new {
+        width: 100%;
+
+    }
+
+    .button-new button {
+        font-size: 20px;
+        color: #0b0b0b;
+        text-align: center;
+
+    }
+
+    .new-button-new img {
+        margin-right: 25%;
+        width: 35%;
+        height: 35%;
+
+    }
+
+    .new-button-new p {
+        font-size: 20px;
+        margin-right: 5%;
+        margin-left: -15%;
+    }
+
+    .col-lg-4 {
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+
+    }
+
+    .on-block-on h2 {
+        font-size: 35px;
+        color: #fffefe;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-left: 3%;
+    }
+
+    .on-block-on p {
+        width: 60%;
+        font-size: 20px;
+        color: #fffefe;
+        margin-left: 3%;
+        margin-top: 2%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .on-block-on-img {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+
+
+
+
+    }
+
+    .on-block-oo h2 {
+        font-size: 30px;
+        color: #0b0b0b;
+        font-weight: bold;
+        margin-bottom: 0px;
+        margin-left: 3%;
+    }
+
+    .on-block-oo p {
+        width: 70%;
+        font-size: 15px;
+        color: #302f2f;
+        margin-left: 3%;
+        margin-top: 2%;
+    }
+
+    .no-block-nn-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .no-block-img {
+        width: 90%;
+        height: 150px;
+        margin: 20px 20px;
+
+
+    }
+
+    .mm {
+        width: 220px;
+        height: 100%;
+        margin: 20px;
+        position: relative;
+        top: 10%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #prevbtn {
+        position: relative;
+        display: flex;
+        z-index: 97;
+        left: 1%;
+        top: 45%;
+        cursor: pointer;
+
+    }
+
+    #nextbtn {
+        color: white;
+        display: flex;
+        z-index: 97;
+        position: relative;
+        right: 1%;
+        top: 45%;
+        cursor: pointer;
+
+    }
+
+    .prevstyle {
+        color: white
+    }
+
+    .no-block-nnnn {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .no-block-nnn {
+        position: relative;
+        margin: 0 auto;
+        width: 85%;
+        height: 300px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .no-block-nn {
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 1400px;
+        height: 300px;
+    }
+
+    .new-button-new button {
+        background-color: #571e9d;
+        width: 100%;
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        color: hsl(0, 33%, 99%);
+
+    }
+
+    .new-button-new button:hover {
+        background-color: #e5c0f7;
+        color: #0c0c0c;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    #buycar {
+        width: 28%;
+        left: 30%;
+        align-items: center;
+        justify-content: center;
+
+
+
+    }
+
+    .signall {
+        width: 40%;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        top: -50px;
+        position: relative;
+        float: right;
+        right: 5%;
+        background-color: #571e9d;
+
+
+    }
+
+
+
+    .sign-in {
+        width: 90%;
+    }
+
+    #namecontainer {
+        width: 90%;
+    }
+
+    #passwordconfirmcontainer {
+        width: 90%;
+    }
+
+    #emailcontainer {
+        width: 90%;
+    }
+
+    #passwordcontainer {
+        width: 90%;
+    }
+
+    .cartWindow.active {
+        width: 99%;
+        height: 80%;
+        left: 0;
+        top: 20%;
+        position: fixed;
+        z-index: 90;
+        display: flex;
+
+
+
+    }
+
+    .cartWindow.active h2 {
+        font-size: 25px;
+        line-height: 60px;
+    }
+
+
+    #x {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 40%;
+    }
+
+
+
+    .fooditem {
+        font-size: 20px;
+    }
+
+    .deletemeal {
+        width: 30px;
+        height: 30px;
+    }
+
+    .bandbtn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .calculate {
+        font-size: 25px;
+    }
+
+    #order {
+        width: 80px;
+        font-size: 25px;
+    }
+
+    footer {
+        width: 116%;
+    }
+}
+
+
+@media only screen and (max-width: 470px) {
+    .no-block-nnn {
+        width: 50%;
+    }
+
+    .no-block-nnnn {
+        width: 90%;
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    #onimg227 {
+        display: none;
+    }
+}
